@@ -1,20 +1,14 @@
-# Performance Dashboard
+# Voler Learning
 
-## First Time Setup
+## Configuracion por primera vez
 
-1. Install [Docker Desktop]()
-2. Install [Lando](https://docs.lando.dev/getting-started/installation.html#install-dmg-via-direct-download-recommended)
-3. ACQ devs - I recommend stopping all instances of docksal containers in docker desktop before proceeding, to avoid port conflicts. The site will run correctly with docksal instances, but the port number changes when you start and stop.
-4. Run `lando start`
-5. Duplicate `.env.example` to `.env`, update `APP_URL` to match the one provided in the previous step if it doesn't match what's in the `.env` file.
-6. Run `lando composer install`
-7. Run `lando artisan key:generate`
-8. Run `lando artisan migrate`
+1. Instalar [Docker Desktop]()
+2. Instalar [Lando](https://docs.lando.dev/getting-started/installation.html#install-dmg-via-direct-download-recommended)
+3. Ejecutar en la consola `lando start`
+4. Duplicar el archivo `.env.example` y cambiarle el nombre a `.env`, actualizar la variable `APP_URL` para que sea la misma que se mostro en el paso anterior al final de la consola
+5. Ejecutar `lando composer install`
+6. Ejecutar `lando artisan key:generate`
+7. Ejecutar `lando artisan migrate`
 
-## Development
-
-While working, you'll likely want to have two terminal windows open.
-
-In the first, run `lando dev` to start the vite server. This rebuilds static asset files, and does hot reloading. This is required to access pages beyond the welcome page.
-
-In the other, you'll run artisan and other Laravel commands, using the [Lando prefix](https://docs.lando.dev/laravel/tooling.html).
+## Desarrollo
+ Puedes verificar la lista de comandos de lando en este link: [Lando prefix](https://docs.lando.dev/laravel/tooling.html).
