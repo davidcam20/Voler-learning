@@ -20,20 +20,38 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>Starter Pages</p>
+                    <a href="{{ route('dashboard') }}" class="nav-link ">
+                        <i class="nav-icon fas fa-home"></i>
+                        <p>Inicio</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('calendario') }}" class="nav-link ">
+                        <i class="nav-icon fas fa-calendar-alt"></i>
+                        <p>Calendario</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('pacientes') }}" class="nav-link">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>Pacientes </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('pagos') }}" class="nav-link">
+                        <i class="nav-icon fas fa-credit-card"></i>
+                        <p>Pagos </p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>Simple Link </p>
+                        <i class="nav-icon fas fa-file"></i>
+                        <p>Documentos </p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fas fa-times"></i>
                         <p>Cerrar Sessión </p>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
