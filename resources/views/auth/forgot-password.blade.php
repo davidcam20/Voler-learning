@@ -8,20 +8,23 @@
     <div class="card-body login-card-body">
         <p class="login-box-msg">Recuperar contraseña</p>
 
-        <form method="POST" action="{{ route('password.email') }}">
+        @if(Session::has('status'))
+            <p class="alert alert-info">{{ Session::get('status') }}</p>
+        @endif
+        <form method="post" action="{{ route('password.email') }}">
             @csrf
             <div class="input-group mb-3">
-                <input type="email" name="email" value="{{ old('email') }}" class="form-control" required placeholder="Email">
+                <input type="email" name="email" value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror" required placeholder="Email">
                 <div class="input-group-append">
                     <div class="input-group-text">
                         <span class="fas fa-envelope"></span>
                     </div>
                 </div>
-                @if ($errors->has('email'))
+                @error('email')
                     <span class="invalid-feedback" role="alert">
-                        <strong>{{ $errors->first('email') }}</strong>
+                        <strong>{{ $message }}</strong>
                     </span>
-                @endif
+                @enderror
             </div>
             <div class="row">
                 <div class="col-12">
