@@ -1,4 +1,4 @@
-@extends('layouts.main',['bodyClass' => 'admin-dashboard', 'pageTitle' => 'Pacientes'])
+@extends('layouts.main',['bodyClass' => 'admin-dashboard', 'pageTitle' => 'Ubicaciones'])
 
 @section('main-content')
     <div class="content-wrapper">
@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Pacientes</h1>
+                        <h1 class="m-0">Ubicaciones</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                            <li class="breadcrumb-item active">Pacientes</li>
+                            <li class="breadcrumb-item active">Ubicaciones</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -29,8 +29,8 @@
                             <div class="card-header">
                                 <div class="info">
                                     <div class="row">
-                                        <div class="col-8"><h3 class="card-title">Listado Pacientes</h3></div>
-                                        <div class="col-4"><a href="{{ route('pacientes.create') }}" class="btn btn-info" style="float: right;">Nuevo Paciente</a></div>
+                                        <div class="col-8"><h3 class="card-title">Listado Ubicaciones</h3></div>
+                                        <div class="col-4"><a href="{{ route('ubicaciones.create') }}" class="btn btn-info" style="float: right;">Nueva Ubicación</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -45,20 +45,20 @@
                                     <thead>
                                     <tr>
                                         <th>Nombre</th>
-                                        <th>Padre o Encargado</th>
-                                        <th>Email Padre o Encargado</th>
-                                        <th>Lugar Atención</th>
+                                        <th>Provincia</th>
+                                        <th>Cantón</th>
+                                        <th>Distrito</th>
                                         <th>Opciones</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($pacientes as $paciente)
+                                    @foreach($ubicaciones as $ubicacion)
                                         <tr>
-                                            <td>{{$paciente->first_name}} {{$paciente->last_name}}</td>
-                                            <td>{{$paciente->parent_guardian_name}}</td>
-                                            <td>{{$paciente->parent_guardian_email}}</td>
-                                            <td>{{$paciente->location->name}}</td>
-                                            <td><a href="{{route('pacientes.edit',$paciente->id)}}">Editar</a></td>
+                                            <td>{{$ubicacion->name}}</td>
+                                            <td>{{$ubicacion->province->name}}</td>
+                                            <td>{{$ubicacion->canton->name}}</td>
+                                            <td>{{$ubicacion->district->name}}</td>
+                                            <td><a href="{{route('ubicaciones.edit',$ubicacion->id)}}">Editar</a></td>
                                         </tr>
                                     @endforeach
 
