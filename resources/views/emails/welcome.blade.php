@@ -143,54 +143,24 @@
 
                         <!-- START text1 -->
                         <div class="col-copy" style="font-family:Avenir, Helvetica-light, Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;text-align:left;color:#455">
-                            Gracias por registrarte con nosotros, ahora podrás realizar tus compras desde el extranjero.
-                            Te dejamos tu información de casillero:
+                            En Voler Learning nos complace poder darte acceso a nuestro sistema para que puedas tener un mejor control y seguimiento de las citas de tu hij@.
+                            Te dejamos tu información para que puedas ingrear a nuestro sistema:
                         </div>
                         <br>
                         <!-- END text1 -->
                         <!-- START text2 -->
                         <div class="col-copy" style="font-family:Avenir, Helvetica-light, Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;text-align:center;color:#455">
-                            Dirección en Miami
+                            Email: {{$user->email}}
                         </div>
                         <!-- END text2 --><br>
                         <!-- START text2 -->
                         <div class="col-copy" style="font-family:Avenir, Helvetica-light, Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;text-align:center;color:#455">
-                            {{$user->name}} MCS
+                            Contraseña: {{$password}}
                         </div>
                         <!-- END text2 -->
                         <!-- START text2 -->
                         <div class="col-copy" style="font-family:Avenir, Helvetica-light, Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;text-align:center;color:#455">
-                            Address Line 1: 2111 NW 79 AVE.
-                        </div>
-                        <!-- END text2 -->
-                        <!-- START text2 -->
-                        <div class="col-copy" style="font-family:Avenir, Helvetica-light, Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;text-align:center;color:#455">
-                            Address Line 2: D1550
-                        </div>
-                        <!-- END text2 -->
-                        <!-- START text2 -->
-                        <div class="col-copy" style="font-family:Avenir, Helvetica-light, Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;text-align:center;color:#455">
-                            City: Doral
-                        </div>
-                        <!-- END text2 -->
-                        <!-- START text2 -->
-                        <div class="col-copy" style="font-family:Avenir, Helvetica-light, Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;text-align:center;color:#455">
-                            State/Province/Region: Florida
-                        </div>
-                        <!-- END text2 -->
-                        <!-- START text2 -->
-                        <div class="col-copy" style="font-family:Avenir, Helvetica-light, Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;text-align:center;color:#455">
-                            Zip Code: 33122
-                        </div>
-                        <!-- END text2 -->
-                        <!-- START text2 -->
-                        <div class="col-copy" style="font-family:Avenir, Helvetica-light, Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;text-align:center;color:#455">
-                            Country: United States
-                        </div>
-                        <!-- END text2 -->
-                        <!-- START text2 -->
-                        <div class="col-copy" style="font-family:Avenir, Helvetica-light, Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;text-align:center;color:#455">
-                            Phone Number: +1 (786) 224-7287
+                            Puedes ingresar haciendo <a href="{{env('APP_URL')}}"> clik en este enlace</a>
                         </div>
                         <!-- END text2 -->
                     </td>

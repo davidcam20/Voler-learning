@@ -12,11 +12,6 @@ class AdminController extends Controller
        return view('admin.calendario');
    }
 
-    public function pacientes()
-    {
-        return view('admin.pacientes.index');
-    }
-
     public function pagos()
     {
         return view('admin.pagos.index');
