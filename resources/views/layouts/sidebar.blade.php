@@ -38,7 +38,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('pagos') }}" class="nav-link">
+                    <a href="{{ route('pagos.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-credit-card"></i>
                         <p>Pagos </p>
                     </a>

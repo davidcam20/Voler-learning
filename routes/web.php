@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LocationsController;
 use App\Http\Controllers\ClientsController;
+use App\Http\Controllers\PaymentsController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
@@ -42,7 +43,7 @@ Route::group(['prefix' => 'admin','middleware' => ['auth', 'permission:admin_acc
     Route::get('calendario', [AdminController::class, 'calendario'])->name('calendario');
     Route::resource('pacientes', ClientsController::class);
     Route::resource('ubicaciones', LocationsController::class);
-    Route::get('pagos', [AdminController::class, 'pagos'])->name('pagos');
+    Route::resource('pagos', PaymentsController::class);
 });
 
 require __DIR__.'/auth.php';
