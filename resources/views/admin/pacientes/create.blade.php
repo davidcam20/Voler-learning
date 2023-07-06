@@ -1,4 +1,4 @@
-@extends('layouts.main',['bodyClass' => 'admin-dashboard', 'pageTitle' => 'Ageegar Paciente'])
+@extends('layouts.main',['bodyClass' => 'admin-dashboard', 'pageTitle' => 'Agregar Paciente'])
 
 @section('main-content')
     <div class="content-wrapper">
