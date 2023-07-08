@@ -1,7 +1,7 @@
 @extends('layouts.guest', ['bodyClass' => 'login-page'])
 @section('main-content')
     <div class="login-logo">
-        <a href="/"><img src="images/voler-logo.png" alt="Voler Logo" class="brand-image" width="100%"></a>
+        <a href="/"><img src="{{ env('APP_URL') }}/images/voler-logo.png" alt="Voler Logo" class="brand-image" width="100%"></a>
     </div>
 <!-- /.login-logo -->
 <div class="card">

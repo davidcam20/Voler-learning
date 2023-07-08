@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Notifications\CustomResetPasswordNotification;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -47,5 +48,17 @@ class User extends Authenticatable
     public function paciente(): HasOne
     {
         return $this->hasOne(Paciente::class);
+    }
+
+    /**
+     * Override this method, to use the custom notification email instead of the default password reset notification.
+     *
+     * Method override Illuminate\Auth\Notifications\ResetPassword
+     * @param  string  $token
+     * @return void
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new CustomResetPasswordNotification($token));
     }
 }

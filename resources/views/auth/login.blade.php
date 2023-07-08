@@ -1,13 +1,16 @@
 @extends('layouts.guest', ['bodyClass' => 'login-page'])
 @section('main-content')
     <div class="login-logo">
-            <a href="/"><img src="images/voler-logo.png" alt="Voler Logo" class="brand-image" width="100%"></a>
+            <a href="/"><img src="{{ env('APP_URL') }}/images/voler-logo.png" alt="Voler Logo" class="brand-image" width="100%"></a>
         </div>
     <!-- /.login-logo -->
     <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Login</p>
 
+                @if(Session::has('status'))
+                    <p class="alert alert-info">{{ Session::get('status') }}</p>
+                @endif
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="input-group mb-3">
